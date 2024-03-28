@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>Página Inicial - News List</title>
+	<link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+	<section>
+		<h1>Cadastro em cursos de extensão</h1>
+			<form action="register" method="post">
+				<label for="fullName">Nome completo:</label>
+				<input type="text" name="fullName" id="fullName" required="required">
+				<label for="email">E-mail:</label>
+				<input type="email" name=email id="email" required="required" multiple="multiple">
+				<fieldset>
+					<legend>Quais são os cursos de seu interesse?</legend>
+					<input type="checkbox" name="options" id="bootstrap" value="Bootstrap" checked="checked">
+					<label for="bootstrap">Bootstrap</label>
+					<input type="checkbox" name="options" id="css3" value="Animações em CSS 3">
+					<label for="css3">Animações em CSS 3</label>
+					<input type="checkbox" name="options" id="design" value="Design Patterns">
+					<label for="design">Design Patterns</label>
+				</fieldset>
+				<input type="submit" value="Cadastrar">
+			</form>
+	</section>
+</body>
+</html>
