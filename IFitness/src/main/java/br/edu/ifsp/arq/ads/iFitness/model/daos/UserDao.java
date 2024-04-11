@@ -64,6 +64,7 @@ public class UserDao {
 	}
 	
 	public Boolean save(User user){
+		//verificar se o email já existe
 		Optional<User> optional = getUserByEmail(user.getEmail());
 		if(optional.isPresent()) {
 			return false;

@@ -17,7 +17,13 @@
   <body>
   	<div class="container">
     	<div class="col-lg-6 offset-lg-3 col-sm-12">
-    		<form action="login" method="post" id="form1">
+    		<c:if test="${result == 'notRegistered }">
+    			<div class="alert alert-danger alert-dismissible fade show" role="alert">
+				  Email já cadastrado.
+				  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>
+    		</c:if>
+    		<form action="userRegister" method="post" id="form1">
     			<h1 class="text-center">Cadastre-se</h1>
     			
     			<div class="mb-2">
