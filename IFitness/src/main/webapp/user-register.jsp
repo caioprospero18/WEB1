@@ -17,7 +17,7 @@
   <body>
   	<div class="container">
     	<div class="col-lg-6 offset-lg-3 col-sm-12">
-    		<c:if test="${result == 'notRegistered }">
+    		<c:if test="${result == 'notRegistered' }">
     			<div class="alert alert-danger alert-dismissible fade show" role="alert">
 				  Email já cadastrado.
 				  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>

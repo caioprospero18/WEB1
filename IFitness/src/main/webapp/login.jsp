@@ -17,9 +17,15 @@
   <body>
   	<div class="container">
     	<div class="col-lg-4 offset-lg-4 col-sm-12">
-    	<c:if test="${result == 'notRegistered }">
+    	<c:if test="${result == 'registered' }">
     		<div class="alert alert-success alert-dismissible fade show" role="alert">
-				Cadastro realizado com sucesso. Faça o login.
+				Usuário cadastrado com sucesso. Faça o login.
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			</div>
+    	</c:if>
+    	<c:if test="${result == 'loginError' }">
+    		<div class="alert alert-danger alert-dismissible fade show" role="alert">
+				E-mail e/ou senha inválidos.
 				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 			</div>
     	</c:if>
