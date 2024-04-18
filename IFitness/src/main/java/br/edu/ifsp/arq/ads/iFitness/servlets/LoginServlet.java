@@ -38,7 +38,7 @@ public class LoginServlet extends HttpServlet{
 			cookie.setMaxAge(60*60*24);
 			resp.addCookie(cookie);
 			req.setAttribute("name", optional.get().getName());
-			dispatcher = req.getRequestDispatcher("/home.jsp");
+			dispatcher = req.getRequestDispatcher("/homeServlet");
 		} else {
 			// remover o cookie
 			Cookie[] cookies = req.getCookies();

@@ -45,14 +45,16 @@ public class UserDao {
 	}
 	
 	public Optional<User> getUserByEmail(String email){
-		String sql = "select email from user where email=?";
+		String sql = "select id,name,email from user where email=?";
 		Optional<User> optional = Optional.empty();
 		try(Connection conn = dataSource.getConnection(); PreparedStatement ps = conn.prepareStatement(sql)){
 			ps.setString(1, email);
 			try(ResultSet rs = ps.executeQuery()){
 				if(rs.next()) {
 					User user = new User();
-					user.setEmail(rs.getString(1));
+					user.setId(rs.getLong(1));
+					user.setName(rs.getString(2));
+					user.setEmail(rs.getString(3));
 					optional = Optional.of(user);
 				}
 			}
